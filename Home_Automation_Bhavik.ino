@@ -1,15 +1,20 @@
+/*
+ * auther : Bhavik chauhan from Expensive Engineers
+ * 
+*/
+
 int sound = 2;            // digital
 int LDRSec = A0;           // analog
 int flame = A1;          // analog
 int LDRlight = A2;         // analog
-int FSR = A3;              // digital
-
-int clap = 0;
+int FSR = A3;              // analog
 
 int cl=7;
 int bzr = 8;
 int brt1 = 9;
 int brt2 = 10;
+
+int clap = 0;
 
 int s1;
 int s2;
@@ -23,6 +28,7 @@ Servo door;
 void setup() 
 {
   Serial.begin(9600);
+
   pinMode(sound, INPUT);
   pinMode(LDRSec, INPUT);
   pinMode(flame, INPUT);
@@ -61,7 +67,9 @@ void loop()
 
 // ================= Clapping lights =================
 
-/*
+/*    
+// Prefer to use this section saperately
+
   if(s1 == 1)
     {
       if(clap == 0)
@@ -77,9 +85,8 @@ void loop()
           Serial.println(" Clapped !!! Lights are Off ");
         }
     
-    }
-    
-  */
+    }    
+*/
   
 // ================= Security system =================
 
@@ -168,7 +175,5 @@ void loop()
   Serial.println(" ");
   Serial.println(" ");
   Serial.println(" ");
-
   
-
 }
